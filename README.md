@@ -22,7 +22,7 @@ NOTE: Due to NDA, ZipLine source code is not available at the moment.
 
 Prerequisite: `gcc 4.8+`
 
-The data generators simulate the `pull and push requests` from mutiple workers and ouput the timestamps of push request of workers in a `n x R` matrix format 
+The data generators simulate the `pull and push requests` from mutiple workers and ouput the timestamps of push request of workers in a `n X R` matrix format 
 (**n**: number of workers and **R**: the range of future iterations or the **R** future iterations of **n** workers).
 For example, there are 10 workers and we want to estimate their next 20 future iterations at some time point, the generators will output a dataset in `10 X 20` matrix format.
 The dataset has 10 entries and each entry has 20 timestampes of workers' `push requsts`.
