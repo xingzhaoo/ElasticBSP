@@ -1,4 +1,4 @@
-# ElasticBSP
+# ZipLine: an optimized algorithm for ElasticBSP
 Dataset generators and source code (ElasticBSP is implemented in `C++11`)
 
 We implement the dataset generators of the paper "[__ZipLine: an optimized algorithm for the elastic bulk synchronous parallel model__](https://link.springer.com/epdf/10.1007/s10994-021-06064-w?sharing_token=SL53OdVFrRUyIz8qjs80RPe4RwlQNchNByi7wbcMAY4ao99V3o1RGUuZsegmpbZzbGG7mCBCJwD1rQzYJwr5nN4k8N7gKw-8a-hnyHswBN1L7R6OOD1rSQd6dbdlb0ySGOtiwHCYV_UWeUfF6CCDvTPEW1_o_uD57Ek8SHPfa7Q%3D)"
