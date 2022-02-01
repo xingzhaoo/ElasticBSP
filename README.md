@@ -17,6 +17,7 @@ NOTE: Due to NDA, ZipLine source code is not available at the moment.
 
 [<img src="DSAA21Talk.png" width="650">](https://youtu.be/NQsjbqaNimk)
 
+[**Slides**](ZipLine_4EBSP.pdf)
 
 # Use case
 
