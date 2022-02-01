@@ -22,9 +22,9 @@ NOTE: Due to NDA, ZipLine source code is not available at the moment.
 
 Prerequisite: `gcc 4.8+`
 
-The data generators simulate the `pull and push requests` from mutiple workers and ouput the timestamps of push request of workers in a `n X R` matrix format 
+The data generators simulate the `pull and push requests` from mutiple workers and ouput the timestamps of push request of workers in a `n x R` matrix format 
 (**n**: number of workers and **R**: the range of future iterations or the **R** future iterations of **n** workers).
-For example, there are 10 workers and we want to estimate their next 20 future iterations at some time point, the generators will output a dataset in `10 X 20` matrix format.
+For example, there are 10 workers and we want to estimate their next 20 future iterations at some time point, the generators will output a dataset in `10 x 20` matrix format.
 The dataset has 10 entries and each entry has 20 timestampes of workers' `push requsts`.
 
 To use these data generators to produce the datasets that are mentioned in Section 6.1 of the [paper](https://link.springer.com/epdf/10.1007/s10994-021-06064-w?sharing_token=SL53OdVFrRUyIz8qjs80RPe4RwlQNchNByi7wbcMAY4ao99V3o1RGUuZsegmpbZzbGG7mCBCJwD1rQzYJwr5nN4k8N7gKw-8a-hnyHswBN1L7R6OOD1rSQd6dbdlb0ySGOtiwHCYV_UWeUfF6CCDvTPEW1_o_uD57Ek8SHPfa7Q%3D)
@@ -55,7 +55,7 @@ and running up to a user-speficied time point (timestamp).
    ```
 
 3. Use `future_iterations_gen.exe` to output a matrix of future timestamps of workers given the init timestamps output from **step 2**, and the number of future iterations
-   of workers (it can detect the number of the workers by reading the init output file). The final output is a `n X R` matrix where **n** is the number of workers 
+   of workers (it can detect the number of the workers by reading the init output file). The final output is a `n x R` matrix where **n** is the number of workers 
    and **R** is the range of the future iterations (or **R** future iterations) for every worker.
    The output file name is auto-generated based on the input **n** and **R**.
    
@@ -69,7 +69,7 @@ and running up to a user-speficied time point (timestamp).
    future_iterations_gen.exe init_data_gen_matrix_worker20_t10.txt 30
    ```
    
-   It will output file `data_gen_future_iteration_workers_n20_R30.txt` which contains 20 entries and each entry has 30 estimated future timestamps (`20 X 30` matrix).
+   It will output file `data_gen_future_iteration_workers_n20_R30.txt` which contains 20 entries and each entry has 30 estimated future timestamps (`20 x 30` matrix).
    
 # Reference
 
