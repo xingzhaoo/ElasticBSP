@@ -1,5 +1,5 @@
 # ZipLine: an optimized algorithm for ElasticBSP
-Dataset generators and source code (ElasticBSP is implemented in `C++11`)
+###### Dataset generators and source code (ElasticBSP is implemented in `C++11`)
 
 We implement the dataset generators of the paper "[__ZipLine: an optimized algorithm for the elastic bulk synchronous parallel model__](https://link.springer.com/epdf/10.1007/s10994-021-06064-w?sharing_token=SL53OdVFrRUyIz8qjs80RPe4RwlQNchNByi7wbcMAY4ao99V3o1RGUuZsegmpbZzbGG7mCBCJwD1rQzYJwr5nN4k8N7gKw-8a-hnyHswBN1L7R6OOD1rSQd6dbdlb0ySGOtiwHCYV_UWeUfF6CCDvTPEW1_o_uD57Ek8SHPfa7Q%3D)"
 , which simulate the real distributed running environment where a parallel computing service is running on mutiple workers upon execution.
@@ -7,29 +7,32 @@ We implement the dataset generators of the paper "[__ZipLine: an optimized algor
 This implenetation is explained in details in Section 6.1 _"ZipLine performance"_ of the paper. 
 It generates the dataset mentioned in Table 2, "_Synthetic datasets with varying number of n and R_".
 
-NOTE: Due to NDA, ZipLine source code is not available at the moment.
+###### NOTE: Due to NDA, ZipLine source code is not available at the moment.
 
-# Paper
+## Paper
 
 [***ZipLine: an optimized algorithm for the elastic bulk synchronous parallel model***](https://link.springer.com/epdf/10.1007/s10994-021-06064-w?sharing_token=SL53OdVFrRUyIz8qjs80RPe4RwlQNchNByi7wbcMAY4ao99V3o1RGUuZsegmpbZzbGG7mCBCJwD1rQzYJwr5nN4k8N7gKw-8a-hnyHswBN1L7R6OOD1rSQd6dbdlb0ySGOtiwHCYV_UWeUfF6CCDvTPEW1_o_uD57Ek8SHPfa7Q%3D)
 
-# Talk in IEEE DSAA 2021
+## Talk in IEEE DSAA 2021
 
 [<img src="DSAA21Talk.png" width="650">](https://youtu.be/NQsjbqaNimk)
 
 [**Slides**](ZipLine_4EBSP.pdf)
 
-# Use case
+## The flow of prediction and synchronization of ElasticBSP
 
-Prerequisite: `gcc 4.8+`
+<img src="predictFutureRIterations.png" width="650">
+
+## Use case
+
+###### Prerequisite: `gcc 4.8+`
 
 The data generators simulate the `pull and push requests` from mutiple workers and ouput the timestamps of push request of workers in a `n x R` matrix format 
 (**n**: number of workers and **R**: the range of future iterations or the **R** future iterations of **n** workers).
 For example, there are 10 workers and we want to estimate their next 20 future iterations at some time point, the generators will output a dataset in `10 x 20` matrix format.
 The dataset has 10 entries and each entry has 20 timestampes of workers' `push requsts`.
 
-To use these data generators to produce the datasets that are mentioned in Section 6.1 of the [paper](https://link.springer.com/epdf/10.1007/s10994-021-06064-w?sharing_token=SL53OdVFrRUyIz8qjs80RPe4RwlQNchNByi7wbcMAY4ao99V3o1RGUuZsegmpbZzbGG7mCBCJwD1rQzYJwr5nN4k8N7gKw-8a-hnyHswBN1L7R6OOD1rSQd6dbdlb0ySGOtiwHCYV_UWeUfF6CCDvTPEW1_o_uD57Ek8SHPfa7Q%3D)
-, please follow the steps below:
+###### To use these data generators to produce the datasets that are mentioned in Section 6.1 of the [paper](https://link.springer.com/epdf/10.1007/s10994-021-06064-w?sharing_token=SL53OdVFrRUyIz8qjs80RPe4RwlQNchNByi7wbcMAY4ao99V3o1RGUuZsegmpbZzbGG7mCBCJwD1rQzYJwr5nN4k8N7gKw-8a-hnyHswBN1L7R6OOD1rSQd6dbdlb0ySGOtiwHCYV_UWeUfF6CCDvTPEW1_o_uD57Ek8SHPfa7Q%3D), please follow the steps below:
 
 Under the downloaded/cloned directory, i.e., `ElasticBSP/`
 
@@ -72,7 +75,7 @@ and running up to a user-speficied time point (timestamp).
    
    It will output file `data_gen_future_iteration_workers_n20_R30.txt` which contains 20 entries and each entry has 30 estimated future timestamps (`20 x 30` matrix).
    
-# Reference
+## Reference
 
 ```
 @article{10.1007/s10994-021-06064-w, 
