@@ -80,7 +80,7 @@ and running up to a user-speficied time point (timestamp).
 ```
 @article{10.1007/s10994-021-06064-w, 
 year = {2021}, 
-title = {{ZipLine: an optimized algorithm for the elastic bulk synchronous parallel model}}, 
+title = {ZipLine: an optimized algorithm for the elastic bulk synchronous parallel model}, 
 author = {Zhao, Xing and Papagelis, Manos and An, Aijun and Chen, Bao Xin and Liu, Junfeng and Hu, Yonggang}, 
 journal = {Machine Learning}, 
 issn = {0885-6125}, 
