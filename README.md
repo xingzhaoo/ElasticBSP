@@ -19,6 +19,8 @@ It generates the dataset mentioned in Table 2, "_Synthetic datasets with varying
 
 [**Slides**](ZipLine_4EBSP.pdf)
 
+[**Extended Abstract**](ieee-dsaa21-zipline-extended-abstract.pdf)
+
 ## The flow of prediction and synchronization of ElasticBSP
 
 <img src="predictFutureRIterations.png" width="650">
